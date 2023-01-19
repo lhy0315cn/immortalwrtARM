@@ -25,7 +25,7 @@
 		earlycon=uart8250,mmio32,0x11002000";
 	};
 	memory {
-		reg = <0 0x40000000 0 0x80000000>;
+		reg = <0 0x40000000 0 0x10000000>;
 	};
 
   
@@ -109,7 +109,7 @@
 
 			partition@600000 {
 				label = "ubi";
-				reg = <0x600000 0x1ea00000>;
+				reg = <0x600000 0x6e00000>;
 				};
 
 				/* last 12 MiB is reserved for NMBM bad block table */
@@ -283,7 +283,7 @@
 		#size-cells = <1>;
 		compatible = "spi-nand";
 		reg = <1>;
-		spi-max-frequency = <66500000>;
+		spi-max-frequency = <20000000>;
 		spi-tx-buswidth = <4>;
 		spi-rx-buswidth = <4>;
 	};
